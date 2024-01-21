@@ -1,12 +1,26 @@
 ---
+import { Image } from 'astro:assets';
+import MakiyuuTopImage from "./images/makiyuu-hello.jpg"
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Makiyuu Okatazuke">
-  <main class="flex justify-center items-center m-2">
-    <section class="flex-col justify-start text-center">
-      <h1>トップページ</h1>
-      <p>ここにホームページを作っていくぞい</p>
+  <main class="flex-col justify-center items-center lg:mx-40 mx-2">
+    <section class="flex justify-center items-center mb-4">
+      <Image src={MakiyuuTopImage} alt="makiyuu-okatazuke-top" width={700} height={700} />
+    </section>
+    <section class="flex-col justify-center">
+      <div class="flex justify-center md:gap-10 gap-4 md:mb-10 mb-4">
+        <div class="bg-gray-200 lg:w-80 lg:h-80 min-w-40 min-h-40 text-center">自己紹介</div>
+        <div class="bg-gray-200 lg:w-80 lg:h-80 min-w-40 min-h-40 text-center">サービス内容</div>
+      </div>
+      <div class="flex justify-center md:gap-10 gap-4 md:mb-10 mb-4">
+        <div class="bg-gray-200 lg:w-80 lg:h-80 min-w-40 min-h-40 text-center">Before/After</div>
+        <div class="bg-gray-200 lg:w-80 lg:h-80 min-w-40 min-h-40 text-center">お申し込み</div>
+      </div>
+    </section>
+    <section class="flex-col justify-center bg-gray-200">
+      <div class="my-4 text-center h-20">Instagram</div>
     </section>
   </main>
 </Layout>
