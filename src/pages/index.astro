@@ -1,26 +1,47 @@
 ---
 import { Image } from 'astro:assets';
-import MakiyuuTopImage from "./images/makiyuu-hello.jpg"
+import MakiyuuTopImage from "./images/makiyuu-top.jpg"
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Makiyuu Okatazuke">
-  <main class="flex-col justify-center items-center lg:mx-40 mx-2">
-    <section class="flex justify-center items-center mb-4">
-      <Image src={MakiyuuTopImage} alt="makiyuu-okatazuke-top" width={700} height={700} />
+  <main class="flex-col justify-center items-center lg:mx-40 mx-4">
+    <section class="flex justify-center items-center my-4">
+      <Image src={MakiyuuTopImage} alt="makiyuu-okatazuke-top" height={500} />
     </section>
-    <section class="flex-col justify-center">
-      <div class="flex justify-center md:gap-10 gap-4 md:mb-10 mb-4">
-        <div class="bg-gray-200 lg:w-80 lg:h-80 min-w-40 min-h-40 text-center">自己紹介</div>
-        <div class="bg-gray-200 lg:w-80 lg:h-80 min-w-40 min-h-40 text-center">サービス内容</div>
+    <section class="flex-col justify-center text-center my-8">
+      <h1 class="lg:text-4xl text-lg text-gray-700 mb-4">お片づけで毎日の暮らしが変わる</h1>
+      <div class="lg:text-base text-xs text-gray-700 mb-2">
+        <p>毎日、お仕事や家事、育児で頑張っているあなたへ</p>
+        <p>帰ってホッとできるおうち空間をつくりませんか？?</p>
+        <p>ちょとした手間を減らすと時間ができる</p>
+        <p>家族からの「ママあれどこ？」</p>
+        <p>毎日の「片付けなさい！」が</p>
+        <p>減ると心にも余裕が生まれる</p>
+        <p>整うとモノの管理よりもカンタンにお財布も潤う</p>
+        <p>なによりご機嫌に過ごせる</p>
       </div>
-      <div class="flex justify-center md:gap-10 gap-4 md:mb-10 mb-4">
-        <div class="bg-gray-200 lg:w-80 lg:h-80 min-w-40 min-h-40 text-center">Before/After</div>
-        <div class="bg-gray-200 lg:w-80 lg:h-80 min-w-40 min-h-40 text-center">お申し込み</div>
+      <div class="lg:text-base text-xs text-gray-700">
+        <p>自分のためのお片付け、はじめませんか？</p>
+        <p>お客様の寄り添ったサポートをいたします</p>
+        <p>お会いできる日を楽しみにしています！</p>
       </div>
     </section>
-    <section class="flex-col justify-center bg-gray-200">
-      <div class="my-4 text-center h-20">Instagram</div>
+    <section class="flex-col justify-center  w-full">
+      <div class="flex justify-between md:gap-10 gap-4 mb-4 w-full">
+        <div class="flex justify-center items-center bg-accent text-slate-100 w-full lg:h-20 min-w-40 min-h-10">サービス一覧</div>
+        <div class="flex justify-center items-center bg-accent text-slate-100 w-full lg:h-20 min-w-40 min-h-10">お申し込み</div>
+      </div>
+      <div class="flex justify-between md:gap-10 gap-4 mb-4 w-full">
+        <div class="flex justify-center items-center bg-accent text-slate-100 w-full lg:h-20 min-w-40 min-h-10">サポート実例</div>
+        <div class="flex justify-center items-center bg-accent text-slate-100 w-full lg:h-20 min-w-40 min-h-10">ABOUT ME</div>
+      </div>
+    </section>
+    <section class="relative w-full h-40 bg-primary bg-gray-200 my-4">
+      <div class="absolute text-gray-700 lg:text-base text-xs top-4 left-4  bg-slate-100 px-4 py-2">
+        <p>日々の暮らしやお片付けのことを発信しています</p>
+        <p>Instagram@makiyuu_okatazuke</p>
+      </div>
     </section>
   </main>
 </Layout>
