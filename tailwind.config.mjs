@@ -6,6 +6,11 @@ export default {
       fontFamily: {
         'body': ['"Noto Sans JP Variable"', 'sans-serif'],
       },
+      colors: {
+        "primary": "var(--color-primary)",
+        "secondary": "var(--color-secondary)",
+        "accent": "var(--color-accent)",
+      }
     },
 	},
 	plugins: [require('@tailwindcss/typography')],
