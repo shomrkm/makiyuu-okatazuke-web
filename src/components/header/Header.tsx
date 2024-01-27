@@ -15,7 +15,9 @@ export const Header = () => {
         <li><a href="examples">サポート実例</a></li>
         <li><a href="about_me">ABOUT ME</a></li>
       </nav>
-      <Menu />
+      <div className="flex justify-center items-center sm:hidden">
+        <Menu />
+      </div>
     </nav>
   )
 }
