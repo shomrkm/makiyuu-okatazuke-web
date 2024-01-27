@@ -1,4 +1,5 @@
 import React from 'react';
+import { Menu } from './Menu';
 
 export const Header = () => {
   return (
@@ -14,9 +15,7 @@ export const Header = () => {
         <li><a href="examples">サポート実例</a></li>
         <li><a href="about_me">ABOUT ME</a></li>
       </nav>
-      <div className="menu bg-secondary px-2 py-1 rounded-md sm:hidden">
-        menu
-      </div>
+      <Menu />
     </nav>
   )
 }
