@@ -1,0 +1,32 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getPosts } from '../../api/getPosts';
+
+const posts = await getPosts()
+const items = posts.items
+---
+
+<Layout title="Makiyuu Okatazuke">
+  <main class="flex-col justify-center items-center lg:mx-40 mx-4">
+    <h1 class="text-4xl my-4">Posts</h1>
+    <section class="post-container">
+      {
+        items.map((post) => (
+          <Fragment class="post" set:html={post.content} />
+        ))
+      }
+    </section>
+ </main>
+</Layout>
+
+---
+<!-- is:global をつけないとCMSから取得したコンテンツにスタイルが当たらない -->
+<!-- https://www.komosyu.dev/posts/13 -->
+<style is:global>
+  .post-container h1 {
+    font-size: 20px;
+  }
+  .post-container li {
+    color: red;
+  }
+</style>
