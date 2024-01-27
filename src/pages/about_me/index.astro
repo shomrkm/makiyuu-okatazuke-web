@@ -1,9 +1,51 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { PageTitle } from '../../components/elements/PageTitle'
+import AboutMeTopImage from "..//images/makiyuu-hello.jpg"
+import { Image } from 'astro:assets';
 ---
 
 <Layout title="Makiyuu Okatazuke|About Me">
-  <main class="flex-col justify-center items-center lg:mx-40 mx-4">
-    <h1 class="text-2xl text-center my-4">About Me</h1>
+  <main class="flex-col justify-center items-center text-gray-700 mt-2 lg:mx-40 mx-4">
+    <PageTitle>About Me</PageTitle>
+    <div class="flex justify-center items-center my-4">
+      <Image src={AboutMeTopImage} alt="about-me-top" height={600} />
+    </div>
+    <section class="flex-col items-center mb-10">
+      <h2 class="text-xl text-center">「お片づけを通して子育てママの毎日をラクにしたい！」</h2>
+      <article class="flex-col text-center lg:text-base text-xs my-4">
+        <p>20代前半で1歳半違いの姉妹を出産.</p>
+        <p>家族も友達もいない土地での子育てを</p>
+        <p class="mb-2">助けてくれたのは「お片づけ」でした.</p>
+        <p>あのとき大変な経験をしたからこそ、</p>
+        <p>今頑張ってるママたちに寄り添って</p>
+        <p>お片づけでサポートしたいと活動を始めました</p>
+      </article>
+    </section>
+    <section class="flex-col justify-center items-center">
+      <div class="w-4/6 mx-auto">
+      <h2 class="text-lg mb-2">まきゆう</h2>
+      <ul>
+        <li>1988年生まれ O型</li>
+        <li>北海道の田舎育ち、現在札幌在住</li>
+      </ul>
+      <div class="my-2">
+        <h3>家族</h3>
+        <ul class="list-inside list-disc">
+          <li>夫</li>
+          <li>長女・次女</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-bold">好きなこと</h3>
+        <ul class="list-inside list-disc">
+          <li>北海道</li>
+          <li>ハンドドリップ</li>
+          <li>キャンプ</li>
+          <li>家族で料理</li>
+        </ul>
+      </div>
+      </div>
+    </section>
  </main>
 </Layout>
