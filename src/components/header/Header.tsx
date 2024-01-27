@@ -6,7 +6,7 @@ export const Header = () => {
     <nav className="sticky top-0 flex bg-primary w-full p-4 justify-start items-center text-xl text-bold text-white h-16">
       <div className="flex-1">
         <a href="/">
-          <h1 className="text-lg">MAKI YUU  お片づけサポート</h1>
+          <h1 className="text-lg sm:text-base">MAKI YUU  お片づけサポート</h1>
         </a>
       </div>
       <nav className="hidden sm:flex text-base gap-6 list-none">
