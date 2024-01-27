@@ -10,7 +10,7 @@ const items = posts.items;
   <main class="flex-col justify-center items-center lg:mx-40 mx-4">
     <h1 class="text-4xl my-4">Posts</h1>
     <section class="post-container">
-      {
+      { items &&
         items.map((post) => (
           <Fragment class="post" set:html={post.content} />
         ))
