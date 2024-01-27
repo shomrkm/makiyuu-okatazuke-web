@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 import MakiyuuTopImage from "./images/makiyuu-top.jpg"
 import Layout from '../layouts/Layout.astro';
+import LinkBox from '../components/elements/LinkBox.astro'
 ---
 
 <Layout title="Makiyuu Okatazuke">
@@ -29,12 +30,12 @@ import Layout from '../layouts/Layout.astro';
     </section>
     <section class="flex-col justify-center  w-full">
       <div class="flex justify-between md:gap-10 gap-4 mb-4 w-full">
-        <div class="flex justify-center items-center bg-accent text-slate-100 w-full lg:h-20 min-w-40 min-h-10">サービス一覧</div>
-        <div class="flex justify-center items-center bg-accent text-slate-100 w-full lg:h-20 min-w-40 min-h-10">お申し込み</div>
+        <LinkBox href="/services">サービス一覧</LinkBox>
+        <LinkBox href="/contact">お申し込み</LinkBox>
       </div>
       <div class="flex justify-between md:gap-10 gap-4 mb-4 w-full">
-        <div class="flex justify-center items-center bg-accent text-slate-100 w-full lg:h-20 min-w-40 min-h-10">サポート実例</div>
-        <div class="flex justify-center items-center bg-accent text-slate-100 w-full lg:h-20 min-w-40 min-h-10">ABOUT ME</div>
+        <LinkBox href="/examples">サポート実例</LinkBox>
+        <LinkBox href="/about_me">ABOUT ME</LinkBox>
       </div>
     </section>
     <section class="relative w-full h-40 bg-primary bg-gray-200 my-4">
