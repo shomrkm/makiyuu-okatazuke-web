@@ -3,7 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import { getPosts } from '../../api/getPosts';
 
 const posts = await getPosts()
-const items = posts.items
+const items = posts.items as any[]
 ---
 
 <Layout title="Makiyuu Okatazuke">
