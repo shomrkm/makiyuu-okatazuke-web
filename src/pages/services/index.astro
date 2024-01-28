@@ -1,10 +1,56 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import { PageTitle } from '../../components/elements/PageTitle'
+import { getService } from '../../api/getService';
+import { PageTitle } from '../../components/elements/PageTitle';
+
+const service = await getService()
 ---
 
-<Layout title="Makiyuu Okatazuke|サービス一覧">
-  <main class="flex-col justify-center mt-2 items-center lg:mx-40 mx-4">
-    <PageTitle>SERVICE</PageTitle>
-  </main>
+<Layout title="Makiyuu Okatazuke">
+  <main class="flex-col justify-center mt-2 items-center lg:mx-80 mx-4 text-gray-700">
+    <PageTitle>
+      <Fragment set:html={service.title} />
+    </PageTitle>
+    <section class="service-description">
+      <Fragment set:html={service.description} />
+    </section>
+    <section class="service-detail list-disc list-inside">
+      <Fragment set:html={service.body} />
+    </section>
+ </main>
 </Layout>
+
+<!-- is:global をつけないとCMSから取得したコンテンツにスタイルが当たらない -->
+<!-- https://www.komosyu.dev/posts/13 -->
+<style is:global>
+  .post-container h1 {
+    font-size: 20px;
+    margin: 2rem 0;
+  }
+  .service-description {
+    margin: 2rem 0;
+  }
+  .service-detail h2 {
+    font-size: 1.5rem;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+  }
+  .service-detail h3 {
+    font-size: 1.25rem;
+    margin: 0.75rem 0;
+    font-weight: bold;
+  }
+  .service-detail h4 {
+    font-size: 1.125rem;
+    margin: 0.5rem 0;
+    font-weight: bold;
+  }
+  .service-detail ul {
+    list-style: disc;
+    list-style-position: inside;
+  }
+  .service-detail p {
+    margin-bottom: 0.25rem;
+  }
+</style>
