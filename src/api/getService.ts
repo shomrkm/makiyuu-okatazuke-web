@@ -1,4 +1,4 @@
-import type { Service } from "../types/service";
+import type { Services, Service } from "../types/service";
 
 export const getService = async (): Promise<Service> => {
   const response = await fetch("https://makiyuu-okatazuke.cdn.newt.so/v1/makiyuu-okatazuke/services", {
@@ -6,6 +6,11 @@ export const getService = async (): Promise<Service> => {
         Authorization: `Bearer ${import.meta.env.NEWT_TOKEN}`,
       },
     });
-  const services = await response.json()
-  return services.items[0];
+  const services: Services = await response.json()
+
+  if(services?.items?.length === 0) {
+    throw Error('Service not found')
+  }
+
+  return services?.items[0];
 }

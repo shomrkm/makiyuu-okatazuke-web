@@ -2,20 +2,21 @@
 import Layout from '../../layouts/Layout.astro';
 import { getService } from '../../api/getService';
 import { PageTitle } from '../../components/elements/PageTitle';
+import type { Service } from '../../types/service'
 
-const service = await getService()
+const service: Service = await getService()
 ---
 
 <Layout title="Makiyuu Okatazuke">
   <main class="flex-col justify-center mt-2 items-center lg:mx-80 mx-4 text-gray-700">
     <PageTitle>
-      <Fragment set:html={service.title} />
+      <Fragment set:html={service?.title} />
     </PageTitle>
     <section class="service-description">
-      <Fragment set:html={service.description} />
+      <Fragment set:html={service?.description} />
     </section>
     <section class="service-detail list-disc list-inside">
-      <Fragment set:html={service.body} />
+      <Fragment set:html={service?.body} />
     </section>
  </main>
 </Layout>
