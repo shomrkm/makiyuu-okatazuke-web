@@ -3,6 +3,8 @@ import { Image } from 'astro:assets';
 import MakiyuuTopImage from "./images/makiyuu-top.jpg"
 import Layout from '../layouts/Layout.astro';
 import { LinkBox } from '../components/elements/LinkBox'
+import { PageTitle } from '../components/elements/PageTitle';
+import ContactImage from "./images/makiyuu-contact.jpg"
 ---
 
 <Layout title="Makiyuu Okatazuke">
@@ -28,7 +30,7 @@ import { LinkBox } from '../components/elements/LinkBox'
         <p>お会いできる日を楽しみにしています！</p>
       </div>
     </section>
-    <section class="flex-col justify-center  w-full">
+    <section class="flex flex-col justify-center  w-full">
       <div class="flex justify-between md:gap-10 gap-4 mb-4 w-full">
         <LinkBox href="/services">サービス一覧</LinkBox>
         <LinkBox href="/contact">お申し込み</LinkBox>
@@ -42,6 +44,24 @@ import { LinkBox } from '../components/elements/LinkBox'
       <div class="absolute text-gray-700 lg:text-base text-xs top-4 left-4  bg-slate-100 px-4 py-2">
         <p>日々の暮らしやお片付けのことを発信しています</p>
         <p>Instagram@makiyuu_okatazuke</p>
+      </div>
+    </section>
+    <section class="flex flex-col justify-center text-center text-gray-700">
+      <h2 class="lg:text-4xl text-lg my-8">お気軽にご相談ください</h2>
+      <div class="flex sm:flex-row flex-col md:gap-10 gap-4 w-full mb-20">
+        <div class="sm:w-1/2">
+          <Image src={ContactImage} alt="contact" />
+        </div>
+        <div class="flex flex-col justify-center items-center bg-slate-200 sm:w-1/2 md:gap-20 gap-2">
+          <a class="mt-2" href="https://liff.line.me/1645278921-kWRPP32q/?accountId=makiyuu_2023">
+            <PageTitle>公式LINEはこちら</PageTitle>
+          </a>
+          <div class="flex flex-col justify-center items-start md:text-lg text-xs mb-4">
+            <p>整理収納アドバイザー  まきゆう</p>
+            <p>yuukamaki82@gmail.com</p>
+            <p>instagram: @makiyuu_okatazuke</p>
+          </div>
+        </div>
       </div>
     </section>
   </main>
