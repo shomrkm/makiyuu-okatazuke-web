@@ -11,7 +11,7 @@ const services: Service[] = await getService()
 ---
 
 <Layout title="Makiyuu Okatazuke">
-  <main class="flex flex-col justify-center mt-2 items-center lg:mx-60 mx-4 text-gray-700">
+  <div class="flex flex-col justify-center mt-2 items-center lg:mx-60 mx-4 text-gray-700">
     <PageTitle>SERVICE</PageTitle>
     <section class="my-8">
       <div class="relative text-gray-600">
@@ -33,7 +33,7 @@ const services: Service[] = await getService()
       ))}
 
     </section>
- </main>
+  </div>
 </Layout>
 
 <!-- is:global をつけないとCMSから取得したコンテンツにスタイルが当たらない -->
