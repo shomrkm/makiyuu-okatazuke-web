@@ -5,7 +5,7 @@ export const LineContact = () => {
   return (
     <div className="flex items-center gap-2">
       <FaLine />
-      <span>公式LINEはこちら</span>
+      <span>公式LINEアカウントはこちら</span>
     </div>
   )
 }
