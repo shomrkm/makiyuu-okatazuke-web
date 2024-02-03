@@ -3,27 +3,42 @@ import Layout from '../../layouts/Layout.astro';
 import { getService } from '../../api/getService';
 import { PageTitle } from '../../components/elements/PageTitle';
 import type { Service } from '../../types/service'
+import { ServiceCard } from '../../components/elements/ServiceCard';
+import ContactImage from "../images/makiyuu-contact.jpg"
+import { Image } from 'astro:assets';
 
-const service: Service = await getService()
+const services: Service[] = await getService()
 ---
 
 <Layout title="Makiyuu Okatazuke">
-  <main class="flex-col justify-center mt-2 items-center lg:mx-80 mx-4 text-gray-700">
-    <PageTitle>
-      <Fragment set:html={service?.title} />
-    </PageTitle>
-    <section class="service-description">
-      <Fragment set:html={service?.description} />
+  <main class="flex flex-col justify-center mt-2 items-center lg:mx-60 mx-4 text-gray-700">
+    <PageTitle>SERVICE</PageTitle>
+    <section class="my-8">
+      <div class="relative text-gray-600">
+        <Image src={ContactImage} alt="contact" />
+        <div class="absolute top-8 left-4 text-4xl">
+          <p class="mb-4">自分のために</p>
+          <p>お片づけを始めてみませんか？</p>
+        </div>
+      </div>
     </section>
-    <section class="service-detail list-disc list-inside">
-      <Fragment set:html={service?.body} />
+    <section class="flex flex-col gap-4 lg:w-[40rem] w-[30rem]">
+      {services.map((service) => (
+        <ServiceCard
+          name={service.name}
+          price={service.price}
+          duration={service.duration}
+          description={service.description}
+        />
+      ))}
+
     </section>
  </main>
 </Layout>
 
 <!-- is:global をつけないとCMSから取得したコンテンツにスタイルが当たらない -->
 <!-- https://www.komosyu.dev/posts/13 -->
-<style is:global>
+<!-- <style is:global>
   .post-container h1 {
     font-size: 20px;
     margin: 2rem 0;
@@ -54,4 +69,4 @@ const service: Service = await getService()
   .service-detail p {
     margin-bottom: 0.25rem;
   }
-</style>
+</style> -->

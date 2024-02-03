@@ -1,16 +1,14 @@
 
 export type Service = {
   _id: string;
-  title: string;
+  name: string;
+  price: number;
+  duration: string;
   description: string;
-  body: string;
+  detail: string;
   _sys: {
     createdAt: string;
     updatedAt: string;
     customOrder: 3,
   }
-}
-
-export type Services = {
-  items: Service[];
 }
