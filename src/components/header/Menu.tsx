@@ -1,4 +1,3 @@
-import React from 'react';
 import { useDisclosure } from '../../hooks/useDisclosure';
 import clsx from 'clsx';
 
