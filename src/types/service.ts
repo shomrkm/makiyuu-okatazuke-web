@@ -12,3 +12,7 @@ export type Service = {
     customOrder: 3,
   }
 }
+
+export type ServiceResponse = {
+  items: Service[];
+}
