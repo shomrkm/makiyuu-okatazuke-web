@@ -17,7 +17,7 @@ export const ServiceCard = ({ name, price, duration, description }: Props) => {
           <span className="mr-1">{formatToCurrency(price)}</span>
           <span className="text-base">円</span></div>
       </div>
-      <span className="text-gray-500">{description}</span>
+      <span className="text-gray-500 md:text-base text-sm">{description}</span>
     </div>
   )
 }
