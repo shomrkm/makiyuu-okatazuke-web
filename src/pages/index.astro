@@ -5,6 +5,9 @@ import Layout from '../layouts/Layout.astro';
 import { LinkBox } from '../components/elements/LinkBox'
 import { PageTitle } from '../components/elements/PageTitle';
 import ContactImage from "./images/makiyuu-contact.jpg"
+import { LineContact } from '../components/elements/LineContact';
+import { MailContact } from '../components/elements/MailContact';
+import { InstagramContact } from '../components/elements/InstagramContact';
 ---
 
 <Layout title="Makiyuu Okatazuke">
@@ -54,12 +57,12 @@ import ContactImage from "./images/makiyuu-contact.jpg"
         </div>
         <div class="flex flex-col justify-center items-center bg-slate-200 sm:w-1/2 md:gap-20 gap-2">
           <a class="mt-2" href="https://liff.line.me/1645278921-kWRPP32q/?accountId=makiyuu_2023">
-            <PageTitle>公式LINEはこちら</PageTitle>
+            <PageTitle><LineContact /></PageTitle>
           </a>
           <div class="flex flex-col justify-center items-start md:text-lg text-xs mb-4">
             <p>整理収納アドバイザー  まきゆう</p>
-            <p>yuukamaki82@gmail.com</p>
-            <p>instagram: @makiyuu_okatazuke</p>
+            <MailContact />
+            <InstagramContact />
           </div>
         </div>
       </div>
