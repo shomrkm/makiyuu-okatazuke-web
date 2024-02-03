@@ -11,18 +11,18 @@ const services: Service[] = await getService()
 ---
 
 <Layout title="Makiyuu Okatazuke">
-  <div class="flex flex-col justify-center mt-2 items-center lg:mx-60 mx-4 text-gray-700">
+  <div class="flex flex-col justify-center mt-2 items-center lg:mx-80 mx-4 text-gray-700">
     <PageTitle>SERVICE</PageTitle>
     <section class="my-8">
-      <div class="relative text-gray-600">
-        <Image src={ContactImage} alt="contact" height={500} />
-        <div class="absolute top-8 left-4 text-2xl">
-          <p class="mb-4">自分のために</p>
+      <div class="relative text-gray-800">
+        <Image src={ContactImage} alt="contact" width={640} />
+        <div class="absolute md:top-8 top-4 left-4 md:text-2xl text-xl">
+          <p class="md:mb-4">自分のために</p>
           <p>お片づけを始めてみませんか？</p>
         </div>
       </div>
     </section>
-    <section class="flex flex-col gap-4">
+    <section class="flex flex-col gap-4 md:w-[640px] w-full">
       {services.map((service) => (
         <ServiceCard
           name={service.name}
@@ -35,38 +35,3 @@ const services: Service[] = await getService()
     </section>
   </div>
 </Layout>
-
-<!-- is:global をつけないとCMSから取得したコンテンツにスタイルが当たらない -->
-<!-- https://www.komosyu.dev/posts/13 -->
-<!-- <style is:global>
-  .post-container h1 {
-    font-size: 20px;
-    margin: 2rem 0;
-  }
-  .service-description {
-    margin: 2rem 0;
-  }
-  .service-detail h2 {
-    font-size: 1.5rem;
-    margin-top: 3rem;
-    margin-bottom: 1.5rem;
-    font-weight: bold;
-  }
-  .service-detail h3 {
-    font-size: 1.25rem;
-    margin: 0.75rem 0;
-    font-weight: bold;
-  }
-  .service-detail h4 {
-    font-size: 1.125rem;
-    margin: 0.5rem 0;
-    font-weight: bold;
-  }
-  .service-detail ul {
-    list-style: disc;
-    list-style-position: inside;
-  }
-  .service-detail p {
-    margin-bottom: 0.25rem;
-  }
-</style> -->
