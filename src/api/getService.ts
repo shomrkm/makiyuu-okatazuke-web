@@ -7,5 +7,5 @@ export const getService = async (): Promise<Service[]> => {
       },
     });
   const services = await response.json()
-  return services.items.sort((a:Service, b:Service)=>b._sys.customOrder - a._sys.customOrder);
+  return (services.items as Service[]).sort((a:Service, b:Service)=>b._sys.customOrder - a._sys.customOrder);
 }
