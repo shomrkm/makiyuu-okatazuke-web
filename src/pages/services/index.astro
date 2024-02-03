@@ -15,14 +15,14 @@ const services: Service[] = await getService()
     <PageTitle>SERVICE</PageTitle>
     <section class="my-8">
       <div class="relative text-gray-600">
-        <Image src={ContactImage} alt="contact" />
-        <div class="absolute top-8 left-4 text-4xl">
+        <Image src={ContactImage} alt="contact" height={500} />
+        <div class="absolute top-8 left-4 text-2xl">
           <p class="mb-4">自分のために</p>
           <p>お片づけを始めてみませんか？</p>
         </div>
       </div>
     </section>
-    <section class="flex flex-col gap-4 lg:w-[40rem] w-[30rem]">
+    <section class="flex flex-col gap-4">
       {services.map((service) => (
         <ServiceCard
           name={service.name}
