@@ -1,10 +1,30 @@
 ---
+import RequestFromLineImage from '../images/request_from_line.png'
 import Layout from '../../layouts/Layout.astro';
 import { PageTitle } from '../../components/elements/PageTitle'
+import { LineContact } from '../../components/elements/LineContact';
+import { StepContent } from '../../components/elements/StepContent';
+import { Image } from 'astro:assets';
 ---
 
 <Layout title="Makiyuu Okatazuke|お申し込み">
-  <div class="flex-col justify-center mt-2 items-center lg:mx-40 mx-4">
+  <div class="flex-col justify-center mt-2 items-center text-gray-700 lg:mx-40 mx-4">
     <PageTitle>お申し込み</PageTitle>
+    <section class="flex flex-col justify-center items-center text-center my-4">
+      <StepContent step={1} title="まきゆう公式LINEを友達に追加">
+        <p>お申し込みや、その後のご連絡にはすべて公式LINEを使用しております。</p>
+        <p>まずはこちらから「友だち追加」をお願いします。</p>
+      </StepContent>
+      <LineContact className='flex justify-center p-4 my-4 bg-primary text-white w-80' />
+    </section>
+    <section class="text-center my-8">
+      <StepContent step={2} title="公式LINEで予約を送信">
+        <p>公式LINEの下記からご予約をお願いいたします。</p>
+        <p>ご予約が完了しましたら、こちらからご連絡いたしますので、少々お待ちください。</p>
+        <div class="flex justify-center items-center my-4">
+          <Image src={RequestFromLineImage} alt="公式LINEから予約する方法の画像" height={300} />
+        </div>
+      </StepContent>
+    </section>
   </div>
 </Layout>

@@ -1,11 +1,18 @@
 
+import clsx from "clsx";
 import { FaLine } from "react-icons/fa";
 
-export const LineContact = () => {
+type Props = {
+  className?: string;
+}
+
+export const LineContact = ({ className = "" }: Props) => {
   return (
-    <div className="flex items-center gap-2">
-      <FaLine />
-      <span>公式LINEアカウントはこちら</span>
-    </div>
+    <a href="https://liff.line.me/1645278921-kWRPP32q/?accountId=makiyuu_2023">
+      <div className={clsx("flex items-center gap-2", `${className}`)}>
+        <FaLine />
+        <span>公式LINEアカウントはこちら</span>
+      </div>
+    </a>
   )
 }
