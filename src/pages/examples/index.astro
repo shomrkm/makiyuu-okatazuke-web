@@ -15,11 +15,11 @@ const beforeAfters: BeforeAfter[] = await getBeforeAfters();
         {beforeAfters.map((ba) => (
           <div class="flex gap-4 mt-4">
             <div class="flex flex-col justify-center items-center">
-              <h3 class="bg-primary text-white text-center w-full py-1 rounded-lg mb-2">Before</h3>
+              <h3 class="bg-primary text-accent text-center w-full py-1 rounded-lg mb-2">Before</h3>
               <Image src={ba.beforeImage.src} alt={ba.beforeImage.altText} width={150} height={150} />
             </div>
             <div class="flex flex-col justify-center items-center">
-              <h3 class="bg-accent text-white text-center w-full py-1 rounded-lg mb-2">After</h3>
+              <h3 class="bg-secondary text-white text-center w-full py-1 rounded-lg mb-2">After</h3>
               <Image src={ba.afterImage.src} alt={ba.afterImage.altText} width={150} height={150} />
             </div>
           </div>
