@@ -5,7 +5,10 @@ export const Header = () => {
     <nav className="sticky top-0 flex bg-primary w-full p-4 justify-start items-center text-xl text-bold text-gray-700 h-16 z-50">
       <div className="flex-1">
         <a href="/">
-          <h1 className="text-lg sm:text-base">MAKI YUU  お片づけサポート</h1>
+          <h1 className='flex gap-4 items-end'>
+            <span className='sm:text-2xl text-base'>MAKI YUU</span>
+            <span className='sm:mb-1 text-sm'>- お片づけサポート -</span>
+          </h1>
         </a>
       </div>
       <nav className="hidden sm:flex text-base gap-6 list-none">

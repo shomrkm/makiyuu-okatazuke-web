@@ -17,9 +17,6 @@ dependencies:
   '@fontsource/noto-sans-jp':
     specifier: ^5.0.17
     version: 5.0.17
-  '@fontsource/roboto':
-    specifier: ^5.0.8
-    version: 5.0.8
   '@types/react':
     specifier: ^18.2.48
     version: 18.2.48
@@ -711,10 +708,6 @@ packages:
 
   /@fontsource/noto-sans-jp@5.0.17:
     resolution: {integrity: sha512-dwgMf7lIkCeK8JtjpzQk8HW0Hh6ACiRTiVnKXS2+8mk5wngd9mQ63B9IgCaKkmjGmmLxVQp76gFiKUzDMP+uxw==}
-    dev: false
-
-  /@fontsource/roboto@5.0.8:
-    resolution: {integrity: sha512-XxPltXs5R31D6UZeLIV1td3wTXU3jzd3f2DLsXI8tytMGBkIsGcc9sIyiupRtA8y73HAhuSCeweOoBqf6DbWCA==}
     dev: false
 
   /@isaacs/cliui@8.0.2:
