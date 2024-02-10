@@ -13,8 +13,8 @@ export const Header = () => {
       </div>
       <nav className="hidden sm:flex text-base gap-6 list-none">
         <li><a href="/services">SERVICE</a></li>
-        <li><a href="/contact">お申し込み</a></li>
-        <li><a href="/examples">サポート実例</a></li>
+        <li><a href="/contact">CONTACT</a></li>
+        <li><a href="/examples">EXAMPLES</a></li>
         <li><a href="/about_me">ABOUT ME</a></li>
       </nav>
       <div className="flex justify-center items-center sm:hidden">
