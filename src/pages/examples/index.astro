@@ -1,10 +1,33 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { PageTitle } from '../../components/elements/PageTitle'
+import type { BeforeAfter } from '../../types/beforeAfter';
+import { getBeforeAfters } from '../../api/getBeforeAfter';
+import { Image } from 'astro:assets';
+
+const beforeAfters: BeforeAfter[] = await getBeforeAfters();
 ---
 
 <Layout title="Makiyuu Okatazuke|サポート実例">
-  <main class="flex-col justify-center mt-2 items-center lg:mx-40 mx-4">
+  <main class="flex-col justify-center text-gray-700 mt-2 items-center lg:mx-40 mx-4">
     <PageTitle>サポート実例</PageTitle>
+      <section class="flex flex-col justify-center items-center gap-4">
+        {beforeAfters.map((ba) => (
+          <div class="flex gap-4 mt-4">
+            <div class="flex flex-col justify-center items-center">
+              <h3 class="bg-primary text-white text-center w-full py-1 rounded-lg mb-2">Before</h3>
+              <Image src={ba.beforeImage.src} alt={ba.beforeImage.altText} width={150} height={150} />
+            </div>
+            <div class="flex flex-col justify-center items-center">
+              <h3 class="bg-accent text-white text-center w-full py-1 rounded-lg mb-2">After</h3>
+              <Image src={ba.afterImage.src} alt={ba.afterImage.altText} width={150} height={150} />
+            </div>
+          </div>
+          <div>{ba.place} / {ba.duration}</div>
+          <div class="sm:text-base text-sm">
+            <Fragment set:html={ba.comment} />
+          </div>
+        ))}
+      </section>
   </main>
 </Layout>
