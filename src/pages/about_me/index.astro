@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import { PageTitle } from '../../components/elements/PageTitle'
 import AboutMeTopImage from "..//images/makiyuu-hello.jpg"
 import { Image } from 'astro:assets';
+import { ProfileIcon } from '../../components/elements/ProfileIcon';
 ---
 
 <Layout title="Makiyuu Okatazuke|About Me">
@@ -24,12 +25,17 @@ import { Image } from 'astro:assets';
     </section>
     <section class="flex-col justify-center items-center">
       <div class="w-4/6 mx-auto">
-        <h2 class="text-lg mb-2">まきゆう</h2>
-        <div class="sm:text-base text-sm">
-          <ul>
-            <li>1988年生まれ O型</li>
-            <li>北海道の田舎育ち、現在札幌在住</li>
-          </ul>
+        <div class="flex items-center gap-6 pt-2 border-t-2">
+          <ProfileIcon size='md' />
+          <div>
+            <h2 class="text-lg mb-2">まきゆう</h2>
+            <ul>
+              <li>1988年生まれ O型</li>
+              <li>北海道の田舎育ち、現在札幌在住</li>
+            </ul>
+          </div>
+        </div>
+        <div class="sm:text-base text-sm mt-4 ml-4">
           <div class="my-2">
             <h3>家族</h3>
             <ul class="list-inside list-disc">
