@@ -1,3 +1,4 @@
+import { ProfileIcon } from '../elements/ProfileIcon';
 import { Menu } from './Menu';
 
 export const Header = () => {
@@ -5,9 +6,10 @@ export const Header = () => {
     <nav className="sticky top-0 flex bg-primary w-full p-4 justify-start items-center text-xl text-bold text-accent h-16 z-50">
       <div className="flex-1">
         <a href="/">
-          <h1 className='flex gap-4 items-end'>
+          <h1 className='flex gap-4 items-center'>
+            <ProfileIcon />
             <span className='sm:text-2xl text-base'>MAKI YUU</span>
-            <span className='sm:mb-1 text-sm'>- お片づけサポート -</span>
+            <span className='md:text-sm text-xs'>- お片づけサポート -</span>
           </h1>
         </a>
       </div>
