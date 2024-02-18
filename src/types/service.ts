@@ -5,7 +5,7 @@ export type Service = {
   price: number;
   duration: string;
   description: string;
-  detail: string;
+  details: string;
   _sys: {
     createdAt: string;
     updatedAt: string;

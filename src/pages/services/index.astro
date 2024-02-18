@@ -24,12 +24,14 @@ const services: Service[] = await getService()
     </section>
     <section class="flex flex-col gap-4 md:w-[640px] w-full">
       {services.map((service) => (
-        <ServiceCard
-          name={service.name}
-          price={service.price}
-          duration={service.duration}
-          description={service.description}
-        />
+        <a href={`./services/${service._id}`}>
+          <ServiceCard
+            name={service.name}
+            price={service.price}
+            duration={service.duration}
+            description={service.description}
+          />
+        </a>
       ))}
 
     </section>

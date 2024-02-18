@@ -1,0 +1,41 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getService } from '../../api/getService';
+import type { Service } from '../../types/service'
+import { ServiceCard } from '../../components/elements/ServiceCard';
+import { PageTitle } from '../../components/elements/PageTitle';
+
+export async function getStaticPaths() {
+  const services: Service[] = await getService()
+  const params = services.map( service => ({
+    params: { id: service._id },
+    props: { service }
+  }))
+
+  return params;
+}
+
+const { service } = Astro.props;
+---
+
+<Layout title="Makiyuu Okatazuke">
+  <div class="flex flex-col justify-center mt-2 items-center lg:mx-80 mx-4 text-gray-700">
+    <PageTitle>SERVICE</PageTitle>
+    <div class="md:w-10/12 w-full">
+      <section class="my-8">
+        <ServiceCard
+          name={service.name}
+          price={service.price}
+          duration={service.duration}
+          description={service.description}
+        />
+      </section>
+      <section class="my-8">
+        <h2 class="text-lg mb-2">詳細説明</h2>
+        <div class="flex flex-col gap-1 md:text-base text-sm text-gray-600">
+          <Fragment set:html={service.details} />
+        </div>
+      </section>
+    </div>
+  </div>
+</Layout>
