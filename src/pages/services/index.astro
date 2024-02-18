@@ -24,7 +24,7 @@ const services: Service[] = await getService()
     </section>
     <section class="flex flex-col gap-4 md:w-[640px] w-full">
       {services.map((service) => (
-        <a href={`./services/${service._id}`}>
+        <a href={`/services/${service._id}`}>
           <ServiceCard
             name={service.name}
             price={service.price}
