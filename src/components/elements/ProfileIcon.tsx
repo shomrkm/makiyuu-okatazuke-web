@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import ProfileImage from '../../pages/images/makiyuu-profile.jpg'
 
 type Props = {
   size?: "sm" | "md" | "lg";
@@ -13,6 +14,6 @@ const sizes = {
 
 export const ProfileIcon = ({ size = 'sm', className }: Props) => {
   return (
-    <img src="/public/makiyuu-profile.jpg" alt="プロフィールアイコン" className={clsx(sizes[size], "rounded-full", `${className}`)} />
+    <img src={ProfileImage.src} alt="プロフィールアイコン" className={clsx(sizes[size], "rounded-full", `${className}`)} />
    )
 }
