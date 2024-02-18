@@ -2,6 +2,7 @@ import clsx from "clsx";
 
 type Props = {
   size?: "sm" | "md" | "lg";
+  className?: string;
 }
 
 const sizes = {
@@ -10,8 +11,8 @@ const sizes = {
   lg: 'w-32 h-32',
 }
 
-export const ProfileIcon = ({ size = 'sm' }: Props) => {
+export const ProfileIcon = ({ size = 'sm', className }: Props) => {
   return (
-    <img src="/public/makiyuu-profile.jpg" alt="プロフィールアイコン" className={clsx(sizes[size], "rounded-full")} />
+    <img src="/public/makiyuu-profile.jpg" alt="プロフィールアイコン" className={clsx(sizes[size], "rounded-full", `${className}`)} />
    )
 }
