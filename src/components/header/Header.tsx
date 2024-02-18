@@ -2,7 +2,7 @@ import { Menu } from './Menu';
 
 export const Header = () => {
   return (
-    <nav className="sticky top-0 flex bg-primary w-full p-4 justify-start items-center text-xl text-bold text-gray-700 h-16 z-50">
+    <nav className="sticky top-0 flex bg-primary w-full p-4 justify-start items-center text-xl text-bold text-accent h-16 z-50">
       <div className="flex-1">
         <a href="/">
           <h1 className='flex gap-4 items-end'>

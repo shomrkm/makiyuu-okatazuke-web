@@ -15,7 +15,7 @@ export const Menu = () => {
         clsx("flex flex-col justify-center w-screen py-4 top-16 fixed bg-primary text-center ease-linear duration-100 ",
           isOpen ? "fixed top-16 right-0" : "fixed top-16 right-[-100%]")
       }>
-        <ul className="flex-col justify-start text-start ml-4 gap-10 text-sm text-accent">
+        <ul className="flex-col justify-start text-start ml-4 gap-10 text-sm text-gray-700">
           <li className='pb-4'><a href="/services">SERVICE<span className='ml-4 text-xs'>- サービス一覧 - </span></a></li>
           <li className='pb-4'><a href="/contact">CONTACT<span className='ml-4 text-xs'>- お申し込み - </span></a></li>
           <li className='pb-4'><a href="/examples">EXAMPLES<span className='ml-4 text-xs'>- サポート実例 - </span></a></li>
