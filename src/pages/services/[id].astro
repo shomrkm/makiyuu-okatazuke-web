@@ -1,16 +1,16 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { getService } from '../../api/getService';
-import type { Service } from '../../types/service'
+import type { Service } from '../../types/service';
 import { ServiceCard } from '../../components/elements/ServiceCard';
 import { PageTitle } from '../../components/elements/PageTitle';
 
 export async function getStaticPaths() {
-  const services: Service[] = await getService()
-  const params = services.map( service => ({
+  const services: Service[] = await getService();
+  const params = services.map((service) => ({
     params: { id: service._id },
-    props: { service }
-  }))
+    props: { service },
+  }));
 
   return params;
 }

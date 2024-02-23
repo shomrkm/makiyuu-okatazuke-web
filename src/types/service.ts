@@ -1,4 +1,3 @@
-
 export type Service = {
   _id: string;
   name: string;
@@ -9,10 +8,10 @@ export type Service = {
   _sys: {
     createdAt: string;
     updatedAt: string;
-    customOrder: 3,
-  }
-}
+    customOrder: 3;
+  };
+};
 
 export type ServiceResponse = {
   items: Service[];
-}
+};

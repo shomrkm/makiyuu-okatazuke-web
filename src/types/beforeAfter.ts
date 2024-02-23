@@ -10,7 +10,7 @@ type Image = {
   altText: string;
   description: string;
   metadata: object;
-}
+};
 export type BeforeAfter = {
   _id: string;
   place: string;
@@ -21,10 +21,10 @@ export type BeforeAfter = {
   _sys: {
     createdAt: string;
     updatedAt: string;
-    customOrder: 3,
-  }
-}
+    customOrder: 3;
+  };
+};
 
 export type BeforeAfterResponse = {
   items: BeforeAfter[];
-}
+};

@@ -1,6 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import { PageTitle } from '../../components/elements/PageTitle'
+import { PageTitle } from '../../components/elements/PageTitle';
 import type { BeforeAfter } from '../../types/beforeAfter';
 import { getBeforeAfters } from '../../api/getBeforeAfter';
 import { BeforeAfterImage } from '../../components/elements/BeforeAfterImage';
@@ -11,20 +11,26 @@ const beforeAfters: BeforeAfter[] = await getBeforeAfters();
 <Layout title="まきゆう|子育てママの毎日をラクにする|整理収納アドバイザー|Example">
   <main class="flex-col justify-center text-gray-700 mt-2 items-center lg:mx-40 mx-4">
     <PageTitle>Example</PageTitle>
-      <aside class="flex flex-col items-center text-sm py-4">
-        <p>* モニターにご協力頂いたお客様のお写真です</p>
-        <p>ご了承頂き掲載しております</p>
-      </aside>
-      <section class="flex flex-col justify-center items-center gap-4">
-        {beforeAfters.map((ba) => (
-          <div class="flex gap-4 mt-4">
-            <BeforeAfterImage beforeImage={ba.beforeImage} afterImage={ba.afterImage} />
-          </div>
-          <div>{ba.place} / {ba.duration}</div>
-          <div class="flex flex-col sm:text-base text-sm gap-1">
-            <Fragment set:html={ba.comment} />
-          </div>
-        ))}
-      </section>
+    <aside class="flex flex-col items-center text-sm py-4">
+      <p>* モニターにご協力頂いたお客様のお写真です</p>
+      <p>ご了承頂き掲載しております</p>
+    </aside>
+    <section class="flex flex-col justify-center items-center gap-4">
+      {
+        beforeAfters.map((ba) => (
+          <>
+            <div class="flex gap-4 mt-4">
+              <BeforeAfterImage beforeImage={ba.beforeImage} afterImage={ba.afterImage} />
+            </div>
+            <div>
+              {ba.place} / {ba.duration}
+            </div>
+            <div class="flex flex-col sm:text-base text-sm gap-1">
+              <Fragment set:html={ba.comment} />
+            </div>
+          </>
+        ))
+      }
+    </section>
   </main>
 </Layout>
