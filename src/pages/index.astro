@@ -15,21 +15,22 @@ import { InstagramContact } from '../components/elements/InstagramContact';
       <Image src={MakiyuuTopImage} alt="makiyuu-okatazuke-top" height={500} />
     </section>
     <section class="flex-col justify-center text-center my-8">
-      <h1 class="lg:text-4xl text-lg text-gray-700 mb-4">お片づけで毎日の暮らしが変わる</h1>
-      <div class="lg:text-base text-xs text-gray-700 mb-2">
-        <p>毎日、お仕事や家事、育児で頑張っているあなたへ</p>
-        <p>帰ってホッとできるおうち空間をつくりませんか？?</p>
-        <p>ちょとした手間を減らすと時間ができる</p>
-        <p>家族からの「ママあれどこ？」</p>
-        <p>毎日の「片付けなさい！」が</p>
-        <p>減ると心にも余裕が生まれる</p>
-        <p>整うとモノの管理よりもカンタンにお財布も潤う</p>
-        <p>なによりご機嫌に過ごせる</p>
-      </div>
-      <div class="lg:text-base text-xs text-gray-700">
-        <p>自分のためのお片付け、はじめませんか？</p>
-        <p>お客様の寄り添ったサポートをいたします</p>
-        <p>お会いできる日を楽しみにしています！</p>
+      <h1 class="sm:text-3xl text-lg text-gray-700 mb-4">お片づけで毎日の暮らしが変わる</h1>
+      <div class="flex flex-col sm:text-xl text-sm text-gray-700 sm:gap-4 gap-2 mb-2">
+        <div>
+          <p>「ただいま」のあとホッとできる場所はありますか？</p>
+        </div>
+        <div>
+          <p>モノと向き合い　おうちを整えると</p>
+          <p>暮らしも心もととのいます</p>
+        </div>
+        <div>
+          <p>ひとりひとりに寄り添って</p>
+          <p>より快適なおうち作りをサポートします</p>
+        </div>
+        <div>
+          <p>最初の一歩、はじめませんか？</p>
+        </div>
       </div>
     </section>
     <section class="flex flex-col justify-center  w-full">
@@ -42,23 +43,14 @@ import { InstagramContact } from '../components/elements/InstagramContact';
         <LinkBox href="/about_me">ABOUT ME</LinkBox>
       </div>
     </section>
-    <section class="relative w-full h-40 bg-secondary bg-gray-200 my-4">
-      <div class="absolute text-gray-700 lg:text-base text-xs top-4 left-4  bg-slate-100 px-4 py-2">
-        <p>【喫茶店員のお片づけ生活】発信中！</p>
-        <InstagramContact />
-      </div>
-    </section>
     <section class="flex flex-col justify-center text-center text-gray-700">
-      <h2 class="lg:text-4xl text-lg my-8">お気軽にご相談ください</h2>
-      <div class="flex sm:flex-row flex-col md:gap-10 gap-4 w-full mb-20">
-        <div class="sm:w-1/2">
-          <Image src={ContactImage} alt="contact" />
-        </div>
-        <div class="flex flex-col justify-center items-center bg-secondary text-slate-100 sm:w-1/2 md:gap-10 gap-2">
+      <h2 class="sm:text-3xl text-lg my-8">お気軽にご相談ください</h2>
+      <div class="flex flex-col md:gap-10 gap-4 w-full mb-20">
+        <div class="flex flex-col justify-center items-center bg-secondary text-slate-100">
           <a class="mt-2" href="https://liff.line.me/1645278921-kWRPP32q/?accountId=makiyuu_2023">
             <LineContact className='flex justify-center p-4 my-4 bg-accent text-white w-80 sm:w-full' />
           </a>
-          <div class="flex flex-col justify-center items-start md:text-lg text-xs mb-4">
+          <div class="flex flex-col justify-center items-start bg-slate-100 text-gray-700 px-10 py-2 md:text-lg text-xs mb-4">
             <p>整理収納アドバイザー  まきゆう</p>
             <MailContact />
             <InstagramContact />
