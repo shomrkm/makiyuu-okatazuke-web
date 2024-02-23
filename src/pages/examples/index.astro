@@ -3,7 +3,6 @@ import Layout from '../../layouts/Layout.astro';
 import { PageTitle } from '../../components/elements/PageTitle'
 import type { BeforeAfter } from '../../types/beforeAfter';
 import { getBeforeAfters } from '../../api/getBeforeAfter';
-import { Image } from 'astro:assets';
 import { BeforeAfterImage } from '../../components/elements/BeforeAfterImage';
 
 const beforeAfters: BeforeAfter[] = await getBeforeAfters();

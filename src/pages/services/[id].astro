@@ -24,6 +24,7 @@ const { service } = Astro.props;
     <div class="md:w-10/12 w-full">
       <section class="my-8">
         <ServiceCard
+          serviceId={service._id}
           name={service.name}
           price={service.price}
           duration={service.duration}
