@@ -4,24 +4,18 @@ import { PageTitle } from '../../components/elements/PageTitle'
 import type { BeforeAfter } from '../../types/beforeAfter';
 import { getBeforeAfters } from '../../api/getBeforeAfter';
 import { Image } from 'astro:assets';
+import { BeforeAfterImage } from '../../components/elements/BeforeAfterImage';
 
 const beforeAfters: BeforeAfter[] = await getBeforeAfters();
 ---
 
-<Layout title="Makiyuu Okatazuke|サポート実例">
+<Layout title="Makiyuu Okatazuke|Example">
   <main class="flex-col justify-center text-gray-700 mt-2 items-center lg:mx-40 mx-4">
     <PageTitle>Example</PageTitle>
       <section class="flex flex-col justify-center items-center gap-4">
         {beforeAfters.map((ba) => (
           <div class="flex gap-4 mt-4">
-            <div class="flex flex-col justify-center items-center max-w-[700px]">
-              <h3 class="bg-primary text-accent text-center w-full py-1 rounded-lg mb-2">Before</h3>
-              <Image src={ba.beforeImage.src} alt={ba.beforeImage.altText} width={ba.beforeImage.width} height={ba.beforeImage.height} />
-            </div>
-            <div class="flex flex-col justify-center items-center max-w-[700px]">
-              <h3 class="bg-secondary text-white text-center w-full py-1 rounded-lg mb-2">After</h3>
-              <Image src={ba.afterImage.src} alt={ba.afterImage.altText} width={ba.afterImage.width} height={ba.afterImage.height} />
-            </div>
+            <BeforeAfterImage beforeImage={ba.beforeImage} afterImage={ba.afterImage} />
           </div>
           <div>{ba.place} / {ba.duration}</div>
           <div class="flex flex-col sm:text-base text-sm gap-1">

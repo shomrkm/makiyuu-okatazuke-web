@@ -9,7 +9,7 @@ type Props = {
 
 export const ServiceCard = ({ name, price, duration, description }: Props) => {
   return (
-    <div className="flex flex-col p-2 border-b-2">
+    <div className="flex flex-col border-b-2">
       <h2 className="lg:text-2xl text-xl text-gray-700">{name}</h2>
       <div className="flex w-auto my-2 lg:text-base text-sm">
         <div className="h-auto p-3 w-1/2 bg-accent text-white rounded-sm text-wrap">{duration}</div>

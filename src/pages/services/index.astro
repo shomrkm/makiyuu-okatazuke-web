@@ -11,18 +11,18 @@ const services: Service[] = await getService()
 ---
 
 <Layout title="Makiyuu Okatazuke">
-  <div class="flex flex-col justify-center mt-2 items-center lg:mx-80 mx-4 text-gray-700">
+  <div class="flex flex-col justify-center items-center mt-2 lg:mx-80 mx-4 text-gray-700 sm:p-0 p-2">
     <PageTitle>Service</PageTitle>
-    <section class="my-8">
+    <section class="my-8 max-w-[640px]">
       <div class="relative text-gray-800">
-        <Image src={ContactImage} alt="contact" width={640} />
-        <div class="absolute md:top-8 top-4 left-4 md:text-2xl text-xl">
+        <Image src={ContactImage} alt="contact" width={ContactImage.width} class="w-full h-auto" />
+        <div class="absolute md:top-4 top-4 left-4 md:text-2xl sm:text-xl text-base text-accent">
           <p class="md:mb-4">自分のために</p>
           <p>お片づけを始めてみませんか？</p>
         </div>
       </div>
     </section>
-    <section class="flex flex-col gap-4 md:w-[640px] w-full">
+    <section class="flex flex-col gap-4 max-w-[640px]">
       {services.map((service) => (
         <a href={`/services/${service._id}`}>
           <ServiceCard
