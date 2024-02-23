@@ -1,17 +1,27 @@
 import { formatToCurrency } from "../../utils/formatToCurrency"
 
 type Props = {
+  serviceId: string;
   name: string;
   price: number;
   duration: string;
   description: string;
+  enableLink?: boolean;
 }
 
-export const ServiceCard = ({ name, price, duration, description }: Props) => {
+export const ServiceCard = ({ serviceId, name, price, duration, description, enableLink = false }: Props) => {
   return (
-    <div className="flex flex-col border-b-2">
-      <h2 className="lg:text-2xl text-xl text-gray-700">{name}</h2>
-      <div className="flex w-auto my-2 lg:text-base text-sm">
+    <div className="flex flex-col pb-4 border-b-2">
+      <div className="sm:mb-4 mb-2">
+        { enableLink ? (
+          <a href={`/services/${serviceId}`} className="text-blue-500 underline">
+            <h2 className="md:text-2xl text-lg">{name}</h2>
+          </a>
+        ) : (
+          <h2 className="sm:text-2xl text-lg">{name}</h2>
+        )}
+      </div>
+      <div className="flex w-auto mb-4 lg:text-base text-sm">
         <div className="h-auto p-3 w-1/2 bg-accent text-white rounded-sm text-wrap">{duration}</div>
         <div className="w-1/2 text-3xl text-gray-700 text-center my-auto">
           <span className="mr-1">{formatToCurrency(price)}</span>
