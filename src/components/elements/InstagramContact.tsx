@@ -8,5 +8,5 @@ export const InstagramContact = () => {
         <span>@makiyuu_okatazuke</span>
       </div>
     </a>
-  )
-}
+  );
+};

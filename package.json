@@ -9,7 +9,7 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "prettier": "prettier --write 'src/**/*.{ts,astro}'"
+    "format": "prettier --ignore-path .gitignore --write './**/*.{js,cjs,ts,jsx,tsx,astro,json,html,md}'"
   },
   "dependencies": {
     "@astrojs/check": "^0.4.1",

@@ -1,27 +1,35 @@
-import { ProfileIcon } from '../elements/ProfileIcon';
-import { Menu } from './Menu';
+import { ProfileIcon } from "../elements/ProfileIcon";
+import { Menu } from "./Menu";
 
 export const Header = () => {
   return (
-    <nav className="sticky top-0 flex bg-primary w-full p-4 justify-start items-center text-xl text-bold text-accent h-16 z-50">
+    <nav className="text-bold sticky top-0 z-50 flex h-16 w-full items-center justify-start bg-primary p-4 text-xl text-accent">
       <div className="flex-1">
         <a href="/">
-          <h1 className='flex gap-4 items-center'>
+          <h1 className="flex items-center gap-4">
             <ProfileIcon />
-            <span className='sm:text-2xl text-base'>MAKI YUU</span>
-            <span className='md:text-sm text-xs'>- お片づけサポート -</span>
+            <span className="text-base sm:text-2xl">MAKI YUU</span>
+            <span className="text-xs md:text-sm">- お片づけサポート -</span>
           </h1>
         </a>
       </div>
-      <nav className="hidden sm:flex text-base gap-6 list-none">
-        <li><a href="/services">SERVICE</a></li>
-        <li><a href="/contact">CONTACT</a></li>
-        <li><a href="/examples">EXAMPLES</a></li>
-        <li><a href="/about_me">ABOUT ME</a></li>
+      <nav className="hidden list-none gap-6 text-base sm:flex">
+        <li>
+          <a href="/services">SERVICE</a>
+        </li>
+        <li>
+          <a href="/contact">CONTACT</a>
+        </li>
+        <li>
+          <a href="/examples">EXAMPLES</a>
+        </li>
+        <li>
+          <a href="/about_me">ABOUT ME</a>
+        </li>
       </nav>
-      <div className="flex justify-center items-center sm:hidden">
+      <div className="flex items-center justify-center sm:hidden">
         <Menu />
       </div>
     </nav>
-  )
-}
+  );
+};

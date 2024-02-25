@@ -1,10 +1,9 @@
-
 import clsx from "clsx";
 import { FaLine } from "react-icons/fa";
 
 type Props = {
   className?: string;
-}
+};
 
 export const LineContact = ({ className = "" }: Props) => {
   return (
@@ -14,5 +13,5 @@ export const LineContact = ({ className = "" }: Props) => {
         <span>公式LINEアカウントはこちら</span>
       </div>
     </a>
-  )
-}
+  );
+};

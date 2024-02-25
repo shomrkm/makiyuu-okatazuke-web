@@ -1,20 +1,26 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import { PageTitle } from '../../components/elements/PageTitle';
-import AboutMeTopImage from '..//images/makiyuu-hello.jpg';
-import { Image } from 'astro:assets';
-import { ProfileIcon } from '../../components/elements/ProfileIcon';
+import Layout from "../../layouts/Layout.astro";
+import { PageTitle } from "../../components/elements/PageTitle";
+import AboutMeTopImage from "..//images/makiyuu-hello.jpg";
+import { Image } from "astro:assets";
+import { ProfileIcon } from "../../components/elements/ProfileIcon";
 ---
 
-<Layout title="まきゆう|子育てママの毎日をラクにする|整理収納アドバイザー|About Me">
-  <div class="flex-col justify-center items-center text-gray-700 mt-2 lg:mx-40 mx-4">
+<Layout
+  title="まきゆう|子育てママの毎日をラクにする|整理収納アドバイザー|About Me"
+>
+  <div
+    class="mx-4 mt-2 flex-col items-center justify-center text-gray-700 lg:mx-40"
+  >
     <PageTitle>About Me</PageTitle>
-    <div class="flex justify-center items-center my-4">
+    <div class="my-4 flex items-center justify-center">
       <Image src={AboutMeTopImage} alt="about-me-top" height={600} />
     </div>
-    <section class="flex-col items-center mb-10">
-      <h2 class="text-xl text-center">「お片づけを通して子育てママの毎日をラクにしたい！」</h2>
-      <article class="flex-col text-center lg:text-base text-xs my-4">
+    <section class="mb-10 flex-col items-center">
+      <h2 class="text-center text-xl">
+        「お片づけを通して子育てママの毎日をラクにしたい！」
+      </h2>
+      <article class="my-4 flex-col text-center text-xs lg:text-base">
         <p>20代前半で1歳半違いの姉妹を出産.</p>
         <p>家族も友達もいない土地での子育てを</p>
         <p class="mb-2">助けてくれたのは「お片づけ」でした.</p>
@@ -23,20 +29,20 @@ import { ProfileIcon } from '../../components/elements/ProfileIcon';
         <p>お片づけでサポートしたいと活動を始めました</p>
       </article>
     </section>
-    <section class="flex-col justify-center items-center">
-      <div class="sm:w-4/6 w-full sm:mx-auto mx-4">
-        <div class="flex items-center gap-6 pt-2 border-t-2">
-          <ProfileIcon size="md" className="sm:flex hidden" />
-          <ProfileIcon size="sm" className="sm:hidden flex" />
+    <section class="flex-col items-center justify-center">
+      <div class="mx-4 w-full sm:mx-auto sm:w-4/6">
+        <div class="flex items-center gap-6 border-t-2 pt-2">
+          <ProfileIcon size="md" className="hidden sm:flex" />
+          <ProfileIcon size="sm" className="flex sm:hidden" />
           <div>
-            <h2 class="sm:text-lg text-base mb-2">まきゆう</h2>
-            <ul class="sm:text-base text-xs">
+            <h2 class="mb-2 text-base sm:text-lg">まきゆう</h2>
+            <ul class="text-xs sm:text-base">
               <li>1988年生まれ O型</li>
               <li>北海道の田舎育ち、現在札幌在住</li>
             </ul>
           </div>
         </div>
-        <div class="sm:text-base text-sm mt-4 ml-4">
+        <div class="ml-4 mt-4 text-sm sm:text-base">
           <div class="my-2">
             <h3>家族</h3>
             <ul class="list-inside list-disc">

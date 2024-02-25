@@ -4,18 +4,16 @@ type Props = {
   step: number;
   title: string;
   children: React.ReactNode;
-}
+};
 
 export const StepContent = ({ step, title, children }: Props) => {
   return (
     <>
       <h2 className="flex items-center justify-center py-4">
-        <span className="sm:text-4xl text-2xl text-accent mr-4">{`STEP${step}`}</span>
-        <span className="sm:text-2xl text-base">{title}</span>
+        <span className="mr-4 text-2xl text-accent sm:text-4xl">{`STEP${step}`}</span>
+        <span className="text-base sm:text-2xl">{title}</span>
       </h2>
-      <div className="sm:text-base text-sm">
-        {children}
-      </div>
+      <div className="text-sm sm:text-base">{children}</div>
     </>
-  )
-}
+  );
+};

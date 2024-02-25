@@ -1,9 +1,9 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import { getService } from '../../api/getService';
-import type { Service } from '../../types/service';
-import { ServiceCard } from '../../components/elements/ServiceCard';
-import { PageTitle } from '../../components/elements/PageTitle';
+import Layout from "../../layouts/Layout.astro";
+import { getService } from "../../api/getService";
+import type { Service } from "../../types/service";
+import { ServiceCard } from "../../components/elements/ServiceCard";
+import { PageTitle } from "../../components/elements/PageTitle";
 
 export async function getStaticPaths() {
   const services: Service[] = await getService();
@@ -19,9 +19,11 @@ const { service } = Astro.props;
 ---
 
 <Layout title="Makiyuu Okatazuke">
-  <div class="flex flex-col justify-center mt-2 items-center lg:mx-80 mx-4 text-gray-700">
+  <div
+    class="mx-4 mt-2 flex flex-col items-center justify-center text-gray-700 lg:mx-80"
+  >
     <PageTitle>SERVICE</PageTitle>
-    <div class="md:w-10/12 w-full">
+    <div class="w-full md:w-10/12">
       <section class="my-8">
         <ServiceCard
           serviceId={service._id}
@@ -32,8 +34,8 @@ const { service } = Astro.props;
         />
       </section>
       <section class="my-8">
-        <h2 class="text-lg mb-2">詳細説明</h2>
-        <div class="flex flex-col gap-1 md:text-base text-sm text-gray-600">
+        <h2 class="mb-2 text-lg">詳細説明</h2>
+        <div class="flex flex-col gap-1 text-sm text-gray-600 md:text-base">
           <Fragment set:html={service.details} />
         </div>
       </section>

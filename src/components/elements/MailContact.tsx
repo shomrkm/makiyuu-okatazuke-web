@@ -6,5 +6,5 @@ export const MailContact = () => {
       <CiMail />
       <span>yuukamaki82@gmail.com</span>
     </div>
-  )
-}
+  );
+};
