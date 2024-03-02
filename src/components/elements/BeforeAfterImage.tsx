@@ -8,7 +8,7 @@ type Props = {
 export const BeforeAfterImage = ({ beforeImage, afterImage }: Props) => {
   return (
     <>
-      <div className="flex max-w-[700px] flex-col items-center justify-center">
+      <div className="flex max-w-[600px] flex-col items-center justify-center">
         <h3 className="mb-2 w-full rounded-lg bg-primary py-1 text-center text-accent">
           Before
         </h3>
@@ -19,7 +19,7 @@ export const BeforeAfterImage = ({ beforeImage, afterImage }: Props) => {
           height={beforeImage.height}
         />
       </div>
-      <div className="flex max-w-[700px] flex-col items-center justify-center">
+      <div className="flex max-w-[600px] flex-col items-center justify-center">
         <h3 className="mb-2 w-full rounded-lg bg-secondary py-1 text-center text-white">
           After
         </h3>
