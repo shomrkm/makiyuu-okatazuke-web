@@ -4,6 +4,7 @@ import { getService } from "../../api/getService";
 import type { Service } from "../../types/service";
 import { ServiceCard } from "../../components/elements/ServiceCard";
 import { PageTitle } from "../../components/elements/PageTitle";
+import { LineContact } from "../../components/elements/LineContact";
 
 export async function getStaticPaths() {
   const services: Service[] = await getService();
@@ -38,6 +39,11 @@ const { service } = Astro.props;
         <div class="flex flex-col gap-1 text-sm text-gray-600 md:text-base">
           <Fragment set:html={service.details} />
         </div>
+      </section>
+      <section class="flex justify-center">
+        <LineContact
+          className="flex justify-center rounded-sm bg-accent px-8 py-4 text-sm text-white sm:text-base"
+        />
       </section>
     </div>
   </div>
