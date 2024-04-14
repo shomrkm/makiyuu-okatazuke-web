@@ -4,6 +4,13 @@
     "config:recommended"
   ],
   "schedule": [
-    "before 8:00am"
+    "after 8am on saturday"
+  ],
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["patch"],
+      "automerge": true,
+      "platformAutomerge": true
+    }
   ]
 }
