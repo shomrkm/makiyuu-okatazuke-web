@@ -8,9 +8,14 @@ type Props = {
 export const LineContact = ({ className = "" }: Props) => {
   return (
     <a href="https://liff.line.me/1645278921-kWRPP32q/?accountId=makiyuu_2023">
-      <div className={clsx("flex items-center gap-2", `${className}`)}>
+      <div
+        className={clsx(
+          "flex items-center gap-2 rounded-full px-12",
+          `${className}`,
+        )}
+      >
         <FaLine />
-        <span>公式LINEアカウントはこちら</span>
+        <span>公式LINEアカウントへ</span>
       </div>
     </a>
   );
