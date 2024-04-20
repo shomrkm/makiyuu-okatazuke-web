@@ -22,7 +22,7 @@ importers:
         version: 5.1.0(astro@4.6.1(@types/node@20.12.7)(typescript@5.4.5))(tailwindcss@3.4.3)
       '@fontsource/noto-sans-jp':
         specifier: ^5.0.17
-        version: 5.0.18
+        version: 5.0.19
       '@types/react':
         specifier: ^18.2.48
         version: 18.2.79
@@ -584,8 +584,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@fontsource/noto-sans-jp@5.0.18':
-    resolution: {integrity: sha512-tIXpfwpwxxn/Gl60fj2w4R7JK1ZQnE2onyY6saEvAdG42MzgvVZ3xsCUIlyhRtkTCB0qukfSj+eZ8tyS7Yxkuw==}
+  '@fontsource/noto-sans-jp@5.0.19':
+    resolution: {integrity: sha512-N0KUmSqX6tlAlnqFQnDywj9e+4RithtLgFGlcRt/85EI8rmDYJFYQCZVhc+xTIk5Kgr1gLtNToHZzK61BTsWqw==}
 
   '@img/sharp-darwin-arm64@0.33.3':
     resolution: {integrity: sha512-FaNiGX1MrOuJ3hxuNzWgsT/mg5OHG/Izh59WW2mk1UwYHUwtfbhk5QNKYZgxf0pLOhx9ctGiGa2OykD71vOnSw==}
@@ -3451,7 +3451,7 @@ snapshots:
   '@esbuild/win32-x64@0.20.2':
     optional: true
 
-  '@fontsource/noto-sans-jp@5.0.18': {}
+  '@fontsource/noto-sans-jp@5.0.19': {}
 
   '@img/sharp-darwin-arm64@0.33.3':
     optionalDependencies:
