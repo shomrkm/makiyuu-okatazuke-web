@@ -35,7 +35,7 @@ const services: Service[] = await getService();
     </section>
     <section class="flex max-w-[640px] flex-col gap-4">
       {
-        services?.length !== 0 ? (
+        services?.length === 0 ? (
           <Spinner size="xl" className="mt-12" />
         ) : (
           services.map((service) => (
