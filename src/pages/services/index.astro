@@ -1,7 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import { getService } from "../../api/getService";
-import { PageTitle } from "../../components/elements/PageTitle";
+import { Spinner, PageTitle } from "../../components/elements";
 import type { Service } from "../../types/service";
 import { ServiceCard } from "../../components/elements/ServiceCard";
 import ContactImage from "../images/makiyuu-contact.jpg";
@@ -35,16 +35,20 @@ const services: Service[] = await getService();
     </section>
     <section class="flex max-w-[640px] flex-col gap-4">
       {
-        services.map((service) => (
-          <ServiceCard
-            serviceId={service._id}
-            name={service.name}
-            price={service.price}
-            duration={service.duration}
-            description={service.description}
-            enableLink
-          />
-        ))
+        services?.length === 0 ? (
+          <Spinner size="xl" className="mt-12" />
+        ) : (
+          services.map((service) => (
+            <ServiceCard
+              serviceId={service._id}
+              name={service.name}
+              price={service.price}
+              duration={service.duration}
+              description={service.description}
+              enableLink
+            />
+          ))
+        )
       }
     </section>
   </div>
